@@ -1,4 +1,4 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-ReactDOM.render( <App  />  , document.getElementById("container"));
+import Data from './data/data.js';
+ReactDOM.render( <App data={Data}  />  , document.getElementById("container"));

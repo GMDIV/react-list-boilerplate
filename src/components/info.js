@@ -4,7 +4,7 @@ function Info (props){
 
 
 	render(){
-		if(!this.props.item){
+		if(!props.item){
 			return (
 				<div className='details'>
 					<h1>Select Item for Information</h1>
@@ -16,9 +16,9 @@ function Info (props){
 			<div className = 'details'>
 				<h3>Details for: </h3>
 				<div>
-					<h2>{this.props.item.name}</h2>
+					<h2>{props.item.name}</h2>
 				</div>
-				<div>{this.props.item.piece}</div>
+				<div>{props.item.piece}</div>
 			</div>
 		)
 	};
