@@ -24,10 +24,3 @@ function Info (props){
 	};
 };
 
-//function mapStateToProps(state) {
-// 	return {
-// 		item: state.activeItem
-// 	}
-// }
-
-// export default connect(mapStateToProps)(Info);
