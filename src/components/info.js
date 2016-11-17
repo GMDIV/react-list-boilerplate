@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Info (props){
+export default function Info (props){
 
 
-	render(){
+	//render(){
 		if(!props.item){
 			return (
 				<div className='details'>
@@ -21,6 +21,6 @@ function Info (props){
 				<div>{props.item.piece}</div>
 			</div>
 		)
-	};
+	//};
 };
 

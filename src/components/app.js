@@ -1,15 +1,15 @@
 import React from 'react';
-import List from '../containers/list';
-import Info from '../containers/info';
+import List from '../components/list';
+import Info from '../components/info';
 import Data from '../data/data.js';
 
 
 export default class App extends React.Component {
 	constructor(props){
-		super()	
+		super(props)	
 
 		this.state= {
-			items: props,
+			items: this.props.data,
 			activeItem: null 
 		}
 	}
