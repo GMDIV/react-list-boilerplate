@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/webpack/bin/webpack.js"
+    "start": "webpack-dev-server --content-base src/build",
+    "build": "webpack"
   },
   "author": "GMDIV",
   "license": "ISC",
@@ -16,7 +17,8 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^3.0.0",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",

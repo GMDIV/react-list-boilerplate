@@ -1,13 +1,14 @@
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/index.html',
-  filename: 'index.html',
+  template: __dirname + '/src/build/index.html',
+  filename: '/src/build/index.html',
   inject: false
 });
 
 module.exports = {
   entry: [
-    './src/index.js'
+    './src/app'
   ],
   module: {
     loaders: [
@@ -15,7 +16,7 @@ module.exports = {
     	exclude: /node_modules/, 
     	loader: 'babel-loader',
     	query: {
-    		presets: ['babel-preset-es2015']
+    		presets: ['es2015', 'react']
      	}
        }
     ], 
@@ -23,8 +24,8 @@ module.exports = {
   }, 
   output: {
     filename: "index_bundle.js",
-    path: __dirname,
-    publicPath: '/'
+    path: __dirname + '/src/build',
+  
   },
   plugins: [HTMLWebpackPluginConfig]
 }

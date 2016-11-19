@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -44,7 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	__webpack_require__(1);
+	(function webpackMissingModule() { throw new Error("Cannot find module \"build\""); }());
 
 
 /***/ },
@@ -21547,7 +21548,7 @@
 	function List(props) {
 		//renderList() {
 		//return (
-
+		console.log("list props", props);
 		//<ul className = 'list-group col-sm-4'>
 
 		return props.items.map(function (item) {
@@ -21556,9 +21557,9 @@
 				{
 					onClick: function onClick() {
 						return props.selectItem(item);
-					},
-					key: item.name,
-					className: "list-group-item" },
+					}
+					//key={item.name}
+					, className: "list-group-item" },
 				item.name
 			);
 		});
